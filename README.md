@@ -21,7 +21,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/hakdogan/agent-to-agent-demo
 
-cd agent-to-agent-demo
+cd a2a-client
 
 mvn clean install
 
