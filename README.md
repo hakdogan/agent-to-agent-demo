@@ -5,6 +5,19 @@ This repository demonstrates how to connect multiple AI agents using the `Agent2
 In this demo, a `Host Agent` classifies user input, makes a routing decision, and forwards the request to the appropriate agent via A2A clients using `LLM function calling`.
 
 ## Architecture / Flow
+
+1. **User Input** is received from the terminal.
+2. The **Host Agent (LLM-powered)**:
+   * Classifies the request.
+   * Decides the routing.
+   * Uses **function calling** to forward the request to the relevant agent.
+
+3. The **A2A Clients** handle communication between the Host Agent and other agents(_e.g., localhost:10001, localhost:10002_) using the **A2A protocol**.
+
+4. **Agents** process the request:
+   * **Market Price Agent** → provides the price information of the requested currency, metal, or stock
+   * **Investment Advisor Agent** → provides investment-related advice in the requested area
+
 ![](images/diagram.png)
 
 ## 🚀 Getting Started
